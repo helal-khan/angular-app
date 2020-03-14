@@ -1,0 +1,13 @@
+<div class="media text-muted pt-3">
+    <label class="check-container">
+        <input (change)="onToggle(todo)" type="checkbox" [checked]="setCheck()">
+        <span class="checkmark"></span>
+    </label>
+    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Helal Khan</strong>
+        <span [ngClass]="setClasses()">{{todo.title}}</span>
+    </p>
+    <button type="button" class="close closeBtn" (click)="onDelete(todo)">
+        <span aria-hidden="true">&nbsp;&times;&nbsp;</span>
+    </button>
+</div>
